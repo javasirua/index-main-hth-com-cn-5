@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://javasirua.github.io/index-main-hth-com-cn-5/sitemap.xml
