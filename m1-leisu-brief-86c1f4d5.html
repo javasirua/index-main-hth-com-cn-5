@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷速 · 资料整理与信息索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f4f7;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: #1e1e2a;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 820px;
+            width: 100%;
+        }
+
+        /* 卡片体系 —— 浅灰背景、细边框、柔和阴影 */
+        .card {
+            background: #fafafc;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+            padding: 2rem 2.2rem;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06), 0 3px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        /* 开场短句 */
+        .opening {
+            font-size: 1.5rem;
+            font-weight: 350;
+            letter-spacing: 0.01em;
+            color: #2b2b3a;
+            border-left: 4px solid #6a7b8b;
+            padding-left: 1.2rem;
+            margin-bottom: 1.8rem;
+            line-height: 1.5;
+        }
+
+        .opening strong {
+            font-weight: 500;
+            color: #1e2a36;
+        }
+
+        /* 承接段落 */
+        .bridge p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #262636;
+        }
+
+        .bridge p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 ———— 无标记、卡片内嵌 */
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.1rem 1.4rem;
+            border: 1px solid #e6e9ed;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            transition: background 0.15s ease;
+        }
+
+        .feature-item:hover {
+            background: #f9f9fd;
+        }
+
+        .feature-item span {
+            display: block;
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+            color: #1f2b38;
+        }
+
+        .feature-item .desc {
+            font-size: 0.95rem;
+            color: #3f4455;
+            line-height: 1.55;
+        }
+
+        /* 温和结尾 */
+        .gentle-end {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e1e4ea;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.02);
+            padding: 1.8rem 2.2rem;
+            text-align: left;
+            color: #2a2e3a;
+        }
+
+        .gentle-end p {
+            margin-bottom: 0.9rem;
+            font-size: 1rem;
+        }
+
+        .gentle-end p:last-child {
+            margin-bottom: 0;
+        }
+
+        .gentle-end a {
+            color: #2c5775;
+            text-decoration: none;
+            border-bottom: 1px dotted #8c9aa8;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .gentle-end a:hover {
+            color: #132332;
+            border-bottom: 1px solid #2c5775;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem 0.9rem;
+            }
+
+            .card {
+                padding: 1.5rem 1.2rem;
+                border-radius: 16px;
+            }
+
+            .opening {
+                font-size: 1.25rem;
+                padding-left: 0.9rem;
+            }
+
+            .feature-item {
+                padding: 0.9rem 1rem;
+            }
+
+            .gentle-end {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+
+        /* 小分隔装饰 */
+        .divider-dot {
+            width: 24px;
+            height: 2px;
+            background: #cbd2da;
+            margin: 1.5rem 0 1rem;
+            border-radius: 10px;
+        }
+
+        hr.soft-line {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d0d5dd, transparent);
+            margin: 1.2rem 0;
+        }
+
+        /* 引用风格 */
+        .quiet-quote {
+            font-style: normal;
+            color: #3f4d5c;
+            background: #f0f2f5;
+            padding: 0.4rem 0.8rem;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 开场短句 -->
+    <div class="card">
+        <div class="opening">
+            资料整理不是简单的堆叠，<br>
+            而是为每一份信息找到位置与<strong>索引</strong>。
+        </div>
+        <div style="font-size: 0.95rem; color: #4f5666; padding-top: 0.2rem;">
+            —— 从一条笔记到一片知识地图，<a href="https://m1-leisu.com" style="color: #2c5775; text-decoration: none; border-bottom: 1px dotted #8c9aa8;">雷速</a> 提供了一种收敛且安静的整理方式。
+        </div>
+    </div>
+
+    <!-- 承接段落：从信息碎片到结构索引 -->
+    <div class="card bridge">
+        <p>
+            日常中我们面对大量零散的信息片段：网页书签、文献摘要、会议记录、项目灵感。多数工具擅长收集，却很少帮助人回顾与联结。若没有一个面向整理本身的索引层，资料越多，越难被有效调用。
+        </p>
+        <p>
+            这也是为什么在构思资料整理时，需要先考虑“如何被找到”。引用、标签、时间线、关联笔记——这些要素构成了一个轻量但坚实的信息骨架。而 <strong>雷速</strong> 正以此作为核心出发点：让索引成为整理的前置动作，而非事后补救。
+        </p>
+        <p>
+            不必追求结构上的完满，也无需预先定义分类；每一次记录都是一次索引的建立。之后无论从哪个节点进入，都能沿着细线找到相邻的内容。
+        </p>
+    </div>
+
+    <!-- 特点列表：从信息索引角度展开 -->
+    <div class="card">
+        <h3 style="font-weight: 450; font-size: 1.2rem; margin-bottom: 1.4rem; color: #1f2b38; letter-spacing: 0.01em;">
+            · 索引视角下的几个特点
+        </h3>
+        <div class="feature-list">
+            <div class="feature-item">
+                <span>条目即节点</span>
+                <div class="desc">每一条记录自带独立身份，不依赖预设文件夹。通过双向关联形成自然网状结构，后期调整时无需搬运内容。</div>
+            </div>
+            <div class="feature-item">
+                <span>上下文保留</span>
+                <div class="desc">保存来源、摘录时间与自定义标签，避免信息脱离语境后变得模糊。索引不仅仅是位置，更是当时的阅读状态。</div>
+            </div>
+            <div class="feature-item">
+                <span>渐进式整理</span>
+                <div class="desc">不需要一次性完成分类。先记录，再通过搜索、标签与链接逐步收敛。整理本身是一种迭代动作。</div>
+            </div>
+            <div class="feature-item">
+                <span>轻回顾机制</span>
+                <div class="desc">通过随机回溯或按时间线浏览，让搁置的资料重新进入视野。索引的最终目的是让信息可以被再次遇见。</div>
+            </div>
+        </div>
+        <div class="divider-dot"></div>
+        <div style="font-size: 0.9rem; color: #515a69;">
+            <span class="quiet-quote">索引不是终点，而是重新进入的入口。</span>
+        </div>
+    </div>
+
+    <!-- 温和结尾：收敛与提示 -->
+    <div class="gentle-end">
+        <p>
+            资料整理不应成为负担。当索引足够清晰，整理本身也可以很安静。你可以在 <a href="https://m1-leisu.com">雷速</a> 中尝试从任意一条记录开始，逐渐搭建属于自己的信息网络——不急于完成，只在意联结。
+        </p>
+        <hr class="soft-line">
+        <p style="font-size: 0.9rem; color: #4b5566;">
+            FAQ 摘要 · 是否支持导入？目前以手动记录与摘录为主，适合小批量、有选择的输入。<br>
+            是否支持团队协作？当前侧重个人索引与整理流程，数据独立存储在本地/用户环境中。<br>
+            如何开始？直接打开 <a href="https://m1-leisu.com" style="color: #2c5775; text-decoration: none; border-bottom: 1px dotted #8c9aa8;">雷速</a>，建立第一条记录即可。无需注册，无强制引导。
+        </p>
+        <div style="margin-top: 1.2rem; font-size: 0.85rem; color: #6f7a89; border-top: 1px solid #e9ecf0; padding-top: 1rem;">
+            <span>资料整理 · 从索引开始</span>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
