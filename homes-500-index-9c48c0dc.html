@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识库 · 500彩票网官方信息窗</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .hero {
+            background: #0b1a2e;
+            color: #e2e8f0;
+            padding: 3rem 1.8rem 2.6rem;
+            text-align: center;
+            border-bottom: 3px solid #3b82f6;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+        }
+        .hero p {
+            max-width: 680px;
+            margin: 0.4rem auto 0;
+            font-size: 1rem;
+            opacity: 0.88;
+        }
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 2.2rem 1.5rem 3rem;
+            flex: 1;
+        }
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            border-left: 5px solid #3b82f6;
+            padding-left: 0.9rem;
+            margin-bottom: 1.2rem;
+            color: #0f172a;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.2rem;
+        }
+        @media (min-width: 700px) {
+            .grid-2col {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.5rem 1.6rem 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03), 0 1px 4px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s ease;
+            border: 1px solid #e9edf2;
+        }
+        .card:hover {
+            box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .card p, .card li {
+            font-size: 0.95rem;
+            color: #334155;
+        }
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .card ul li {
+            padding: 0.3rem 0 0.3rem 1.2rem;
+            position: relative;
+        }
+        .card ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: 700;
+        }
+        .notice-area {
+            background: #f1f5fe;
+            border-left: 4px solid #3b82f6;
+            border-radius: 14px;
+            padding: 1.3rem 1.6rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.3rem 0.6rem;
+        }
+        .notice-area .label {
+            font-weight: 600;
+            color: #0b1a2e;
+            background: #dbeafe;
+            padding: 0.1rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        .notice-area p {
+            flex: 1;
+            min-width: 200px;
+            font-size: 0.95rem;
+            color: #1e293b;
+        }
+        .faq-mini {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 0.6rem;
+        }
+        .faq-item {
+            border-bottom: 1px dashed #d1d9e6;
+            padding-bottom: 0.8rem;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 0.98rem;
+            margin-bottom: 0.1rem;
+        }
+        .faq-answer {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        .link-em {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #2563eb;
+            transition: border-bottom 0.15s;
+        }
+        .link-em:hover {
+            border-bottom: 2px solid #1e40af;
+            color: #1e40af;
+        }
+        .extra-note {
+            background: #ffffffd9;
+            border-radius: 18px;
+            padding: 1.2rem 1.6rem;
+            margin-top: 1.6rem;
+            border: 1px solid #e2e8f0;
+            font-size: 0.92rem;
+            color: #334155;
+        }
+        .extra-note strong {
+            color: #0b1a2e;
+        }
+        footer {
+            text-align: center;
+            padding: 1.8rem 1rem;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            background: #fafbfd;
+        }
+        footer a {
+            color: #1e293b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .hero .sub-line {
+            margin-top: 0.3rem;
+            font-size: 0.92rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>📋 信息入口 · 知识简册</h1>
+    <p>围绕平台基础认知与常用路径，搭建一份轻量的指引页面。<br>内容聚焦站点属性与使用场景，方便快速建立了解。</p>
+    <p class="sub-line">—— 稳定入口 · 平实说明 ——</p>
+</div>
+
+<div class="container">
+
+    <!-- 说明区 + 提示区 左右布局 -->
+    <div class="grid-2col">
+        <div class="card">
+            <h3>📌 关于这个站点</h3>
+            <p><a href="https://homes-500.com" class="link-em">500彩票网官方</a> 是围绕彩票信息与相关服务搭建的线上平台。页面聚合常见资讯、玩法说明以及工具链接，适合希望系统了解彩票基础知识的用户日常浏览。</p>
+            <p style="margin-top: 0.8rem;">本站并非简单导航，而是以“知识库”形式整理分类内容，强调信息查找的便利性与一致性。你可以把它当作一个常备的参考手册，随时回来查阅。</p>
+        </div>
+        <div class="card">
+            <h3>💡 使用提示</h3>
+            <ul>
+                <li>首次访问建议先浏览“常见问题”板块，快速建立认知框架。</li>
+                <li>页面内所有外链均指向 <a href="https://homes-500.com" class="link-em">500彩票网官方</a> 相关栏目，可放心使用。</li>
+                <li>分类卡片按功能划分，点击标题或链接可跳转至对应内容页。</li>
+                <li>页面结构保持简洁，不包含弹窗与自动跳转，体验更清爽。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 相关信息区：卡片式目录感 -->
+    <div class="section-title">📂 相关信息 · 分类速览</div>
+    <div class="grid-2col" style="margin-bottom: 1.2rem;">
+        <div class="card">
+            <h3>🧭 玩法与规则</h3>
+            <p>涵盖主流彩种的基础玩法、术语解释以及随机对照表。规则说明均引用自 <a href="https://homes-500.com" class="link-em">500彩票网官方</a> 公开资料，定期核对更新。</p>
+            <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #475569;">适合新手查看基础概念，也有老用户常用的参数速查。</p>
+        </div>
+        <div class="card">
+            <h3>📊 走势与工具</h3>
+            <p>提供历史开奖号码、冷热分布以及简易计算工具。所有数据来源均指向官方接口，页面只做展示与归纳。</p>
+            <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #475569;">工具模块无需登录即可使用，方便日常对比与记录。</p>
+        </div>
+        <div class="card">
+            <h3>📰 资讯与公告</h3>
+            <p>聚合平台发布的调整说明、休市通知以及活动预告。信息同步周期与 <a href="https://homes-500.com" class="link-em">500彩票网官方</a> 保持一致。</p>
+            <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #475569;">重要公告会置顶显示，历史记录归档可检索。</p>
+        </div>
+        <div class="card">
+            <h3>🔐 账户与安全</h3>
+            <p>关于注册、登录、密码管理以及隐私设置的基础指引。相关操作均引导至官方页面完成，本页仅提供说明性文字。</p>
+            <p style="margin-top: 0.6rem; font-size: 0.9rem; color: #475569;">不收集任何私密信息，亦不存储用户凭证。</p>
+        </div>
+    </div>
+
+    <!-- 提示区 + FAQ 摘要 -->
+    <div class="notice-area">
+        <span class="label">📢 提示</span>
+        <p>本知识库页面为独立整理内容，所有引用均标注来源。如发现信息不一致，请以 <a href="https://homes-500.com" class="link-em">500彩票网官方</a> 最新发布为准。</p>
+    </div>
+
+    <div style="margin: 1.4rem 0 0.6rem;">
+        <div class="section-title">❓ 常见问题 · 摘要</div>
+        <div class="faq-mini">
+            <div class="faq-item">
+                <div class="faq-question">1. 如何找到具体的玩法说明？</div>
+                <div class="faq-answer">在“玩法与规则”卡片中点击相关链接，即可跳转至 <a href="https://homes-500.com" class="link-em">500彩票网官方</a> 对应页面。所有分类都做了标签化整理。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">2. 数据多久更新一次？</div>
+                <div class="faq-answer">走势与开奖结果每天同步，资讯板块视官方公告时效更新。通常延迟不超过一小时。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">3. 页面会收集个人浏览信息吗？</div>
+                <div class="faq-answer">本页为纯静态展示，不部署追踪脚本，也不使用第三方统计。你可以放心浏览。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">4. 是否提供客服或在线咨询？</div>
+                <div class="faq-answer">本页不嵌入即时通讯功能。如有疑问，建议直接访问 <a href="https://homes-500.com" class="link-em">500彩票网官方</a> 的帮助中心获取支持。</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="extra-note">
+        <strong>📎 最后说明</strong>：本页面旨在作为一个轻量的信息起点，方便你快速查阅、定位所需内容。所有链接均指向 <a href="https://homes-500.com" class="link-em">500彩票网官方</a> 站点，不存在第三方中间页。建议将本页加入书签，日常使用更顺手。
+    </div>
+
+</div>
+
+<footer>
+    <span>信息页 · 仅供参阅 | 内容来源 </span>
+    <a href="https://homes-500.com" style="color:#2563eb;text-decoration:none;font-weight:500;">500彩票网官方</a>
+    <span style="margin:0 0.6rem;">·</span>
+    <span>更新于近期</span>
+</footer>
+
+</body>
+</html>
